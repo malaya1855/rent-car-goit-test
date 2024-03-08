@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-import { Heart } from "react-feather";
 import {
   PropertyTitle,
   AdvertItemImg,
