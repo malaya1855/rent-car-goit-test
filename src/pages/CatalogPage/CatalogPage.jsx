@@ -14,18 +14,16 @@ export const CatalogPage = () => {
   const [advertsAll, setAdvertsAll] = useState([]);
   const dispatch = useDispatch();
 
+  const onHandleLoadMore = () => {
+    setPage((prevPage) => prevPage + 1);
+    setAdvertsAll((prevAdverts) => [...prevAdverts, ...adverts]);
+  };
+
   useEffect(() => {
-    console.log(page);
     dispatch(fetchAdverts(page));
     setAdvertsAll(adverts);
-    // setAdvertsAll((prevAdverts) => [...prevAdverts, ...adverts]);
-  }, [dispatch, page, adverts]);
+  }, [dispatch, page]);
 
-  const onHandleLoadMore = () => {
-    setPage((prevPage) => {
-      prevPage + 1;
-    });
-  };
   return loading ? (
     <p>Loading</p>
   ) : (
