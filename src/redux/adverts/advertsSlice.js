@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAdverts } from "./operations";
+import { fetchAdverts, filterAdverts } from "./operations";
 
 const initialState = {
   items: [],
   isLoading: false,
   error: null,
+  isFiltered: false,
 };
 
 export const advertsSlice = createSlice({
@@ -17,6 +18,13 @@ export const advertsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
+        state.isFiltered = false;
+      })
+      .addCase(filterAdverts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+        state.isFiltered = true;
       })
 
       .addMatcher(

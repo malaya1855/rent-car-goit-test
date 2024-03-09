@@ -14,3 +14,17 @@ export const fetchAdverts = createAsyncThunk(
     }
   }
 );
+
+export const filterAdverts = createAsyncThunk(
+  "adverts/filterAdverts",
+  async (filter, thunkAPI) => {
+    try {
+      const response = await axios.get(`/adverts`);
+      const data = response.data;
+      const filteredData = data.filter((advert) => advert.make === filter);
+      return filteredData;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);

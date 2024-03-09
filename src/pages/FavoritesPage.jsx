@@ -4,6 +4,7 @@ import { AdvertsList } from "./CatalogPage/CatalogPage.styled";
 import { useEffect } from "react";
 import { fetchAdverts } from "../redux/adverts/operations";
 import { AdvertPreviewCard } from "../components/AdvertPreviewCard/AdvertPreviewCard";
+import { UniversalMessage } from "../components/UniversalMessage/UniversalMessage";
 
 export const FavoritesPage = () => {
   const favoriteAdverts = useSelector(favoritesSelector) || [];
@@ -15,7 +16,7 @@ export const FavoritesPage = () => {
   return (
     <div className="container">
       {favoriteAdverts.length === 0 ? (
-        <p>You do not have favorite adverts</p>
+        <UniversalMessage content={"You do not have favorite adverts"} />
       ) : (
         <AdvertsList>
           {favoriteAdverts.map((car) => (

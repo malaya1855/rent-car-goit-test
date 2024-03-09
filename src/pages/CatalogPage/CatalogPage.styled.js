@@ -5,8 +5,6 @@ export const AdvertsList = styled.ul`
   flex-wrap: wrap;
   column-gap: 29px;
   row-gap: 50px;
-  padding-top: 150px;
-  margin-bottom: 100px;
 `;
 
 export const LoadMoreBtn = styled.button`
@@ -21,6 +19,7 @@ display
   }
   background: transparent;
   border: none;
+  margin-top: 100px;
   margin-bottom: 150px;
   
 `;

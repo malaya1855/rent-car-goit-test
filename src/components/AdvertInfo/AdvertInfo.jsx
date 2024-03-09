@@ -20,9 +20,14 @@ import {
 export const AdvertInfo = ({ car }) => {
   const carAddress = car.address.split(", ");
   const conditions = car.rentalConditions.split("\n");
+  const defaultFoto =
+    "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png";
   return (
     <AdvertListItem>
-      <AdvertItemImg src={car.img} alt={car.model}></AdvertItemImg>
+      <AdvertItemImg
+        src={car.img || defaultFoto}
+        alt={car.model}
+      ></AdvertItemImg>
       <CarHeadItem>
         <CarTitle>
           {car.make} <CarModel>{car.model}</CarModel>, {car.year}
