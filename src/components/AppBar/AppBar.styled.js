@@ -6,7 +6,6 @@ export const Navigation = styled.div`
   justify-content: flex-end;
   gap: 20px;
   align-items: center;
-  border-bottom: 0.5px solid var(--secondary-text-color);
 `;
 export const Link = styled.a`
   font-weight: 500;

@@ -4,7 +4,7 @@ import headerLinks from "../../data/navHeader.json";
 
 export const AppBarMenu = () => {
   return (
-    <div className="container">
+    <div className="container container-header">
       <Navigation>
         {headerLinks.map(({ id, title, href }) => (
           <NavigationLink key={id} to={href}>

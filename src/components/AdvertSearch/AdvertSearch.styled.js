@@ -23,6 +23,7 @@ export const SearchBtn = styled.button`
   border-radius: 12px;
   padding: 14px 44px;
   width: 136px;
+  font-family: "Manrope", san-serif;
   height: 48px;
   font-weight: 600;
   font-size: 14px;
@@ -39,6 +40,7 @@ export const ResetBtn = styled.button`
   padding: 14px 44px;
   width: 136px;
   height: 48px;
+  font-family: "Manrope", san-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.42857;
