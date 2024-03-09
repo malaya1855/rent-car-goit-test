@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./Layout";
 
 // import { lazy } from "react";
-import { HomePage } from "../pages/HomePage";
+import { HomePage } from "../pages/HomePage/HomePage";
 import { CatalogPage } from "../pages/CatalogPage/CatalogPage";
 import { FavoritesPage } from "../pages/FavoritesPage";
 

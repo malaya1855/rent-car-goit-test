@@ -72,6 +72,10 @@ body {
   margin: 0 auto;
   width: 1440px;
 }
+.container-page {
+  margin-top: 100px;
+  align-items: center;
+}
 .navigation {
   font-weight: 500;
   font-size: 16px;

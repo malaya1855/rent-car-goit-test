@@ -14,15 +14,17 @@ export const FavoritesPage = () => {
     dispatch(fetchAdverts());
   }, [dispatch]);
   return (
-    <div className="container">
+    <div className="container container-page">
       {favoriteAdverts.length === 0 ? (
         <UniversalMessage content={"You do not have favorite adverts"} />
       ) : (
-        <AdvertsList>
-          {favoriteAdverts.map((car) => (
-            <AdvertPreviewCard key={car.id} car={car} />
-          ))}
-        </AdvertsList>
+        <div>
+          <AdvertsList>
+            {favoriteAdverts.map((car) => (
+              <AdvertPreviewCard key={car.id} car={car} />
+            ))}
+          </AdvertsList>
+        </div>
       )}
     </div>
   );
