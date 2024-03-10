@@ -7,10 +7,10 @@ import {
 } from "../../redux/adverts/advertsSelectors";
 import { useEffect, useState } from "react";
 import { fetchAdverts } from "../../redux/adverts/operations";
-import { AdvertsList, AdvertsPreview, LoadMoreBtn } from "./CatalogPage.styled";
+import { AdvertsList, AdvertsPreview } from "./CatalogPage.styled";
 import { AdvertSearch } from "../../components/AdvertSearch/AdvertSearch";
-import { UniversalMessage } from "../../components/UniversalMessage/UniversalMessage";
 import { Loader } from "../../components/Loader";
+import { LoadMore } from "../../components/LoadMore/LoadMore";
 export const CatalogPage = () => {
   const adverts = useSelector(advertsSelector);
   const loading = useSelector(isLoadingSelector);
@@ -18,21 +18,10 @@ export const CatalogPage = () => {
   const [page, setPage] = useState(1);
   const [advertsAll, setAdvertsAll] = useState([]);
   const dispatch = useDispatch();
-  const onHandleLoadMore = () => {
-    console.log(page);
-    console.log(adverts);
-    // const newAdverts = () => [...adverts];
-    // console.log(newAdverts);
-    setPage((prevPage) => prevPage + 1);
-    setAdvertsAll((prevAdverts) => [...prevAdverts, ...adverts]);
-  };
 
   useEffect(() => {
-    dispatch(fetchAdverts(page));
-  }, [dispatch, page]);
-  useEffect(() => {
-    adverts.length > 0 && page === 1 && setAdvertsAll([...adverts]);
-  }, [page, adverts]);
+    dispatch(fetchAdverts());
+  }, [dispatch]);
 
   return (
     <div className="container container-page">
@@ -42,20 +31,13 @@ export const CatalogPage = () => {
       ) : (
         <AdvertsPreview>
           <AdvertsList>
-            {advertsAll &&
-              advertsAll.length !== 0 &&
-              advertsAll.map((car) => (
+            {adverts &&
+              adverts.length !== 0 &&
+              adverts.map((car) => (
                 <AdvertPreviewCard key={car.id} car={car} />
               ))}
           </AdvertsList>
-          {!filter &&
-            (advertsAll.length > 0 && advertsAll.length < 32 ? (
-              <LoadMoreBtn type="button" onClick={onHandleLoadMore}>
-                Load more
-              </LoadMoreBtn>
-            ) : (
-              <UniversalMessage content={"No more adverts to see"} />
-            ))}
+          {!filter && <LoadMore />}
         </AdvertsPreview>
       )}
     </div>

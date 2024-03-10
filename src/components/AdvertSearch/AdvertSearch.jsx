@@ -7,7 +7,7 @@ import {
   SearchItem,
   SelectLabel,
 } from "./AdvertSearch.styled";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchAdverts, filterAdverts } from "../../redux/adverts/operations";
 
@@ -18,7 +18,6 @@ const filterOptions = (item) => ({
 
 export const AdvertSearch = () => {
   const [make, setMake] = useState("");
-  const [page, setPage] = useState(1);
 
   const dispatch = useDispatch();
   const handleSearchSubmit = (e) => {
@@ -28,8 +27,14 @@ export const AdvertSearch = () => {
     }
   };
   const handleReset = () => {
-    dispatch(fetchAdverts(page));
+    dispatch(fetchAdverts());
   };
+
+  useEffect(() => {
+    if (make === "") {
+      dispatch(fetchAdverts());
+    }
+  }, [dispatch, make]);
 
   return (
     <SearchForm onSubmit={handleSearchSubmit} id="searchForm">
@@ -41,16 +46,24 @@ export const AdvertSearch = () => {
           classNamePrefix="searchSelect"
           id="selectMakes"
           form="searchForm"
-          //   defaultValue={make}
+          isClearable={make && true}
+          onChange={(selectedOption) => {
+            setMake(selectedOption ? selectedOption.value : "");
+          }}
+        />
+      </SearchItem>
+      <SearchItem>
+        <SelectLabel htmlFor="selectPrice">Price/ 1 hour</SelectLabel>
+        <Select
+          options={makes.map(filterOptions)}
+          placeholder={"To $"}
+          classNamePrefix="searchSelect"
+          id="selectPrice"
+          form="searchForm"
           isClearable={make && true}
           onChange={(selectedOption) => {
             setMake(selectedOption && selectedOption.value);
           }}
-          //   onChange={(options) => setMake(options.value)}
-          //   defaultValue={{
-          //     label: makes.map(filterOptions)[0].label,
-          //     value: makes.map(filterOptions)[0].value,
-          //   }}
         />
       </SearchItem>
       <SearchBtn type="submit">Search</SearchBtn>
