@@ -1,8 +1,37 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Rent Car Application
 
-Currently, two official plugins are available:
+Це застосунок для компанії, яка надає послуги прокату автомобілів в Україні. Застосунок має три сторінки: домашню сторінку, сторінку каталогу та сторінку з оголошеннями.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технічні деталі
+
+- Реалізовано за допомогою React та Redux.
+- Використано Axios для здійснення запитів.
+- Роутинг реалізовано за допомогою React Router.
+- Використовується MockAPI для роботи із списком оголошень.
+
+## Запуск проєкту
+
+1. Склонуйте репозиторій:
+
+```bash
+git clone https://github.com/malaya1855/rent-car-goit-test.git
+```
+2. Встановіть необхідні пакети:
+
+```bash
+npm install
+```
+3. Запустіть проєкт:
+```bash
+npm run dev
+```
+4. Відкрийте в браузері http://localhost:3000.
+
+## Додаткові завдання
+- Реалізовано фільтрацію за маркою автомобіля.
+- Додано пагінацію, реалізовану на бекенді MockAPI.
+- Реалізовано можливість збереження обраних автомобілей.
+
+## Контакти розробника
+Катерина Мала  - malaya1855@gmail.com - [GitHubPages](<https://github.com/malaya1855>)
