@@ -20,7 +20,7 @@ const HomePage = () => {
       <MakesTitle>We have cars for you</MakesTitle>
       <MakesList>
         {makes.map((make, i) => {
-          return <MakesListItem key={make[i]}>{make}</MakesListItem>;
+          return <MakesListItem key={i}>{make}</MakesListItem>;
         })}
       </MakesList>
     </div>
