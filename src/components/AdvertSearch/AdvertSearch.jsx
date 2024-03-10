@@ -1,5 +1,7 @@
 import Select from "react-select";
 import makes from "../../data/makes.json";
+import prices from "../../data/prices.json";
+
 import {
   ResetBtn,
   SearchBtn,
@@ -18,23 +20,34 @@ const filterOptions = (item) => ({
 
 export const AdvertSearch = () => {
   const [make, setMake] = useState("");
+  const [price, setPrice] = useState("");
+  const [filters, setFilters] = useState({});
+
+  const placeholderMake = "Enter the text";
+  const placeholderPrice = "To $";
 
   const dispatch = useDispatch();
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    if (make !== "") {
-      dispatch(filterAdverts(make));
-    }
+
+    const newFilters = {};
+    if (make) newFilters.make = make;
+    if (price) newFilters.price = price;
+    setFilters(newFilters);
+    dispatch(filterAdverts(newFilters));
   };
   const handleReset = () => {
     dispatch(fetchAdverts());
+    setMake("");
+    setPrice("");
+    setFilters({});
   };
 
   useEffect(() => {
-    if (make === "") {
+    if (make === "" && price === "") {
       dispatch(fetchAdverts());
     }
-  }, [dispatch, make]);
+  }, [dispatch, make, price]);
 
   return (
     <SearchForm onSubmit={handleSearchSubmit} id="searchForm">
@@ -42,11 +55,12 @@ export const AdvertSearch = () => {
         <SelectLabel htmlFor="selectMakes">Car brand</SelectLabel>
         <Select
           options={makes.map(filterOptions)}
-          placeholder={"Enter the text"}
+          placeholder={placeholderMake}
           classNamePrefix="searchSelect"
           id="selectMakes"
           form="searchForm"
           isClearable={make && true}
+          onReset={handleReset}
           onChange={(selectedOption) => {
             setMake(selectedOption ? selectedOption.value : "");
           }}
@@ -55,19 +69,19 @@ export const AdvertSearch = () => {
       <SearchItem>
         <SelectLabel htmlFor="selectPrice">Price/ 1 hour</SelectLabel>
         <Select
-          options={makes.map(filterOptions)}
-          placeholder={"To $"}
+          options={prices.map(filterOptions)}
+          placeholder={placeholderPrice}
           classNamePrefix="searchSelect"
           id="selectPrice"
           form="searchForm"
-          isClearable={make && true}
+          isClearable={price && true}
           onChange={(selectedOption) => {
-            setMake(selectedOption && selectedOption.value);
+            setPrice(selectedOption ? selectedOption.value : "");
           }}
         />
       </SearchItem>
       <SearchBtn type="submit">Search</SearchBtn>
-      <ResetBtn type="button" onClick={handleReset}>
+      <ResetBtn type="reset" disabled={!make && !price} onClick={handleReset}>
         Reset
       </ResetBtn>
     </SearchForm>

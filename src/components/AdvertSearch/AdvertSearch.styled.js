@@ -36,19 +36,20 @@ export const SearchBtn = styled.button`
   }
 `;
 export const ResetBtn = styled.button`
-  border-radius: 12px;
-  padding: 14px 44px;
-  width: 136px;
+  width: 100%;
   height: 48px;
   font-family: "Manrope", san-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.42857;
   background-color: transparent;
-  border: 1px solid var(--primary-accent-color);
+  border: none;
   color: var(--primary-accent-color);
   &:hover {
     border-color: var(--secondary-accent-color);
     color: var(--secondary-accent-color);
+  }
+  &:disabled {
+    color: var(--secondary-text-color);
   }
 `;

@@ -16,17 +16,28 @@ import {
   PropertyList,
   PropertyListItem,
 } from "./AdverInfo.styled";
+import { useState } from "react";
 
 export const AdvertInfo = ({ car }) => {
   const carAddress = car.address.split(", ");
   const conditions = car.rentalConditions.split("\n");
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
   const defaultFoto =
     "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png";
+
+  const image = !imageError ? car.img : defaultFoto;
+
+  console.log(image);
   return (
     <AdvertListItem>
       <AdvertItemImg
-        src={car.img || defaultFoto}
+        src={image}
         alt={car.model}
+        onError={handleImageError}
       ></AdvertItemImg>
       <CarHeadItem>
         <CarTitle>
@@ -90,4 +101,5 @@ export const AdvertInfo = ({ car }) => {
 
 AdvertInfo.propTypes = {
   car: PropTypes.object.isRequired,
+  image: PropTypes.string.isRequired,
 };

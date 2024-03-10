@@ -27,6 +27,16 @@ export const AdvertPreviewCard = ({ car }) => {
   const carIsFavorite = favoriteAdverts.some(
     (favoriteAdvert) => favoriteAdvert.id === car.id
   );
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+  const defaultFoto =
+    "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png";
+
+  const image = !imageError ? car.img : defaultFoto;
+
   const dispatch = useDispatch();
   const carAddress = car.address.split(", ");
   const carType = car.type.split(", ");
@@ -40,12 +50,17 @@ export const AdvertPreviewCard = ({ car }) => {
       dispatch(removeFavorites(car.id));
     }
   };
+
   return (
     <AdvertListItem key={car.id}>
       <FavoriteBtn type="button" onClick={onHandleClickFavorite}>
         <HeartSvg as={Heart} className={!carIsFavorite ? "" : " favorite"} />
       </FavoriteBtn>
-      <AdvertItemImg src={car.img} alt={car.model}></AdvertItemImg>
+      <AdvertItemImg
+        src={image}
+        alt={car.model}
+        onError={handleImageError}
+      ></AdvertItemImg>
       <CarHeadItem>
         <CarTitle>
           {car.make}, {car.year}

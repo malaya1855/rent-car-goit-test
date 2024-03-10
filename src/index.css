@@ -150,7 +150,7 @@ body {
   margin-bottom: 8px !important;
 }
 .searchSelect__option:hover {
-  color: var(--secondary-text-color) !important;
+  color: var(--primary-text-color) !important;
 }
 .searchSelect__option--is-selected {
   color: var(--primary-text-color) !important;

@@ -8,7 +8,7 @@ import {
   MakesListItem,
   MakesTitle,
 } from "./HomePage.styled";
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <div className="container container-page">
       <Hero>
@@ -26,3 +26,4 @@ export const HomePage = () => {
     </div>
   );
 };
+export default HomePage;

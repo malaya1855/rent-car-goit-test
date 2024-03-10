@@ -59,7 +59,6 @@ export const MakesList = styled.ul`
 export const MakesListItem = styled.li`
   border-radius: 35px;
   font-size: 16px;
-
   padding: 7px 14px;
   background-color: #f9f9f9;
   letter-spacing: -0.003px;
