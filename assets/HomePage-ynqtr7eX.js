@@ -1,4 +1,4 @@
-import{u as r,j as e,L as a}from"./index-Ujy7hqtd.js";import{m as n}from"./makes-DCESgvo9.js";const i=r.div`
+import{u as r,j as e,L as a}from"./index-sazX38oB.js";import{m as n}from"./makes-DCESgvo9.js";const i=r.div`
   width: 100%;
   height: 400px;
   background-color: var(--secondary-text-color);
@@ -6,7 +6,7 @@ import{u as r,j as e,L as a}from"./index-Ujy7hqtd.js";import{m as n}from"./makes
       rgba(18, 20, 23, 0.2),
       rgba(18, 20, 23, 0.2)
     ),
-    url("./src/assets/images/hero.jpg");
+    url("../../assets/images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
