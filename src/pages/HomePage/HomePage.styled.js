@@ -8,7 +8,7 @@ export const Hero = styled.div`
       rgba(18, 20, 23, 0.2),
       rgba(18, 20, 23, 0.2)
     ),
-    url("../../assets/images/hero.jpg");
+    url("/assets/images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
