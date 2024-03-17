@@ -31,7 +31,6 @@ export const AdvertInfo = ({ car }) => {
 
   const image = !imageError ? car.img : defaultFoto;
 
-  console.log(image);
   return (
     <AdvertListItem>
       <AdvertItemImg
@@ -101,5 +100,4 @@ export const AdvertInfo = ({ car }) => {
 
 AdvertInfo.propTypes = {
   car: PropTypes.object.isRequired,
-  image: PropTypes.string.isRequired,
 };

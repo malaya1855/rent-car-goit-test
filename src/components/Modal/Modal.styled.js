@@ -15,16 +15,16 @@ export const Backdrop = styled.div`
 export const Wrapper = styled.div`
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 541px;
   display: flex;
   justify-content: center;
   align-itmes: center;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
 `;
 export const Content = styled.div`
   position: relative;
-  width: 541px;
+  width: 100%;
   background-color: var(--primary-white-color);
   border-radius: 24px;
   padding: 40px;
