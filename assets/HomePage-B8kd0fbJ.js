@@ -1,4 +1,4 @@
-import{u as r,j as e,L as a}from"./index-DB1q4QL7.js";import{m as n}from"./makes-DCESgvo9.js";const i=r.div`
+import{u as t,j as e,L as a}from"./index-B1ETD3Ib.js";import{m as n}from"./makes-DCESgvo9.js";const i=t.div`
   width: 100%;
   height: 400px;
   background-color: var(--secondary-text-color);
@@ -6,7 +6,7 @@ import{u as r,j as e,L as a}from"./index-DB1q4QL7.js";import{m as n}from"./makes
       rgba(18, 20, 23, 0.2),
       rgba(18, 20, 23, 0.2)
     ),
-    url("/src/assets/images/hero.jpg");
+    url("/rent-car-goit-test/src/assets/images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -18,13 +18,13 @@ import{u as r,j as e,L as a}from"./index-DB1q4QL7.js";import{m as n}from"./makes
   color: var(--primary-white-color);
   border-radius: 24px;
   margin-bottom: 30px;
-`,s=r.h1`
+`,s=t.h1`
   font-weight: 600;
   font-size: 64px;
   line-height: 72px;
   letter-spacing: 1px;
   text-align: center;
-`,c=r.a`
+`,c=t.a`
   display: block;
   font-weight: 400;
   font-size: 18px;
@@ -33,24 +33,24 @@ import{u as r,j as e,L as a}from"./index-DB1q4QL7.js";import{m as n}from"./makes
   &:hover {
     font-weight: 600;
   }
-`,p=r.p`
+`,p=t.p`
   font-weight: 600;
   font-size: 20px;
   line-height: 1.42857;
   color: var(--primary-accent-color);
   margin-bottom: 30px;
   text-align: center;
-`,l=r.ul`
+`,l=t.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   margin-bottom: 24px;
-`,x=r.li`
+`,x=t.li`
   border-radius: 35px;
   font-size: 16px;
   padding: 7px 14px;
   background-color: #f9f9f9;
   letter-spacing: -0.003px;
   color: var(--addit-text-color);
-`,h=()=>e.jsxs("div",{className:"container container-page",children:[e.jsxs(i,{children:[e.jsx(s,{children:"Take control of your car rent"}),e.jsx(c,{as:a,to:"/catalog",children:"Find your car to rent"})]}),e.jsx(p,{children:"We have cars for you"}),e.jsx(l,{children:n.map((t,o)=>e.jsx(x,{children:t},o))})]});export{h as default};
+`,h=()=>e.jsxs("div",{className:"container container-page",children:[e.jsxs(i,{children:[e.jsx(s,{children:"Take control of your car rent"}),e.jsx(c,{as:a,to:"/catalog",children:"Find your car to rent"})]}),e.jsx(p,{children:"We have cars for you"}),e.jsx(l,{children:n.map((r,o)=>e.jsx(x,{children:r},o))})]});export{h as default};
