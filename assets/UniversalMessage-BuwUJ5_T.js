@@ -1,4 +1,4 @@
-import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-C2_0Ggsi.js";const B=i.li`
+import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-mQ963Ptu.js";const B=i.li`
   width: 274px;
   position: relative;
 `,H=i.button`
@@ -20,7 +20,7 @@ import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-C2
   height: 268px;
   object-fit: cover;
   border-radius: 12px;
-`,D=i.div`
+`,X=i.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
@@ -31,7 +31,7 @@ import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-C2
   color: var(--primary-text-color);
 `;i.span`
   color: var(--primary-accent-color);
-`;const U=i.div`
+`;const D=i.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -45,7 +45,7 @@ import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-C2
   &:not(:last-child) {
     border-right: 1px solid var(--border-color);
   }
-`,X=i.button`
+`,U=i.button`
   font-family: "Manrope", san-serif;
   font-weight: 600;
   font-size: 14px;
@@ -74,15 +74,15 @@ import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-C2
 `,ee=i.div`
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 541px;
   display: flex;
   justify-content: center;
   align-itmes: center;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
 `,te=i.div`
   position: relative;
-  width: 541px;
+  width: 100%;
   background-color: var(--primary-white-color);
   border-radius: 24px;
   padding: 40px;
@@ -134,7 +134,7 @@ import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-C2
   gap: 4px;
   margin-bottom: 24px;
   height: 40px;
-`,u=i.ul`
+`,f=i.ul`
   display: flex;
 `,c=i.li`
   padding: 0 6px;
@@ -151,7 +151,7 @@ import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-C2
   line-height: 1.42857;
   color: var(--primary-text-color);
   margin-bottom: 24px;
-`,R=i.p`
+`,z=i.p`
   font-weight: 500;
   font-size: 14px;
   line-height: 1.42857;
@@ -186,8 +186,8 @@ import{u as i,r as h,g,P as l,j as t,d as M,b as S,i as F,k as _}from"./index-C2
   &:focus {
     background-color: var(--secondary-accent-color);
   }
-`,z=({car:e})=>{const s=e.address.split(", "),o=e.rentalConditions.split(`
-`),[n,r]=h.useState(!1),a=()=>{r(!0)},f=n?"https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png":e.img;return console.log(f),t.jsxs(oe,{children:[t.jsx(ne,{src:f,alt:e.model,onError:a}),t.jsx(ie,{children:t.jsxs(se,{children:[e.make," ",t.jsx(ae,{children:e.model}),", ",e.year]})}),t.jsxs(E,{children:[t.jsxs(u,{children:[t.jsx(c,{children:s[1]}),t.jsx(c,{children:s[2]}),t.jsxs(c,{children:["Id: ",e.id]}),t.jsxs(c,{children:["Year: ",e.year]}),t.jsxs(c,{children:["Type: ",e.type]})]}),t.jsxs(u,{children:[t.jsxs(c,{children:["Fuel Consumption: ",e.fuelConsumption]}),t.jsxs(c,{children:["Engine size: ",e.engineSize]})]})]}),t.jsx(le,{children:e.description}),t.jsx(R,{children:"Accessories and functionalities:"}),t.jsxs(E,{children:[t.jsx(u,{children:e.accessories.map(d=>t.jsx(c,{children:d},d))}),t.jsx(u,{children:e.functionalities.map(d=>t.jsx(c,{children:d},d))})]}),t.jsx(R,{children:"Rental Conditions:"}),t.jsxs(de,{children:[o.map(d=>t.jsx(m,{children:d.includes(":")?t.jsxs(t.Fragment,{children:[t.jsx("span",{children:d.split(":")[0]}),t.jsx("span",{children:":"}),t.jsx(v,{children:d.split(":")[1]})]}):d},d)),t.jsxs(m,{children:["Mileage:"," ",t.jsx(v,{children:e.mileage.toLocaleString("en-US")})]}),t.jsxs(m,{children:["Price: ",t.jsx(v,{children:e.rentalPrice})]})]}),t.jsx(ce,{href:"tel:+380730000000",children:"Rental Car"})]})};z.propTypes={car:l.object.isRequired,image:l.string.isRequired};const L=({content:e,onClose:s,isOpen:o})=>{h.useEffect(()=>{const r=p=>{p.key==="Escape"&&s()},a=()=>{document.body.style.overflow=o?"hidden":"auto"};return o&&(a(),window.addEventListener("resize",a)),window.addEventListener("keydown",r),()=>{window.removeEventListener("keydown",r),window.removeEventListener("resize",a),document.body.style.overflow="auto"}},[s,o]);const n=r=>{r.target===r.currentTarget&&s()};return t.jsx(Z,{onClick:n,children:t.jsx(ee,{children:t.jsxs(te,{children:[t.jsx(re,{type:"button",onClick:s,children:t.jsx(V,{})}),t.jsx(z,{car:e})]})})})};L.propTypes={content:l.object.isRequired,onClose:l.func.isRequired,isOpen:l.bool.isRequired};const pe=e=>e.favorites.favorites,xe=({car:e})=>{const[s,o]=h.useState(!1),r=(M(pe)||[]).some(A=>A.id===e.id),[a,p]=h.useState(!1),f=()=>{p(!0)},P=a?"https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png":e.img,k=S(),I=e.address.split(", "),q=e.type.split(", "),T=()=>{o(!0)},$=()=>{k(r?_(e.id):F(e))};return t.jsxs(B,{children:[t.jsx(H,{type:"button",onClick:$,children:t.jsx(W,{as:G,className:r?" favorite":""})}),t.jsx(N,{src:P,alt:e.model,onError:f}),t.jsxs(D,{children:[t.jsxs(C,{children:[e.make,", ",e.year]}),t.jsx(C,{children:e.rentalPrice})]}),t.jsxs(U,{children:[t.jsxs(O,{children:[t.jsx(x,{children:I[1]}),t.jsx(x,{children:I[2]}),t.jsx(x,{children:e.rentalCompany})]}),t.jsxs(O,{children:[t.jsx(x,{children:q[0]}),t.jsx(x,{children:e.model}),t.jsx(x,{children:e.id}),t.jsx(x,{children:e.accessories[0]})]})]}),t.jsx(X,{type:"button",onClick:T,children:"Learn more"}),s&&t.jsx(L,{onClose:()=>o(!1),content:e,isOpen:s})]},e.id)};xe.propTypes={car:l.shape({id:l.number.isRequired,img:l.string.isRequired,make:l.string.isRequired,model:l.string.isRequired,year:l.number.isRequired,rentalPrice:l.string.isRequired,address:l.string.isRequired,rentalCompany:l.string.isRequired,type:l.string.isRequired,accessories:l.arrayOf(l.string).isRequired}).isRequired};const ue=i.div`
+`,R=({car:e})=>{const s=e.address.split(", "),o=e.rentalConditions.split(`
+`),[n,r]=h.useState(!1),a=()=>{r(!0)},u=n?"https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png":e.img;return t.jsxs(oe,{children:[t.jsx(ne,{src:u,alt:e.model,onError:a}),t.jsx(ie,{children:t.jsxs(se,{children:[e.make," ",t.jsx(ae,{children:e.model}),", ",e.year]})}),t.jsxs(E,{children:[t.jsxs(f,{children:[t.jsx(c,{children:s[1]}),t.jsx(c,{children:s[2]}),t.jsxs(c,{children:["Id: ",e.id]}),t.jsxs(c,{children:["Year: ",e.year]}),t.jsxs(c,{children:["Type: ",e.type]})]}),t.jsxs(f,{children:[t.jsxs(c,{children:["Fuel Consumption: ",e.fuelConsumption]}),t.jsxs(c,{children:["Engine size: ",e.engineSize]})]})]}),t.jsx(le,{children:e.description}),t.jsx(z,{children:"Accessories and functionalities:"}),t.jsxs(E,{children:[t.jsx(f,{children:e.accessories.map(d=>t.jsx(c,{children:d},d))}),t.jsx(f,{children:e.functionalities.map(d=>t.jsx(c,{children:d},d))})]}),t.jsx(z,{children:"Rental Conditions:"}),t.jsxs(de,{children:[o.map(d=>t.jsx(m,{children:d.includes(":")?t.jsxs(t.Fragment,{children:[t.jsx("span",{children:d.split(":")[0]}),t.jsx("span",{children:":"}),t.jsx(v,{children:d.split(":")[1]})]}):d},d)),t.jsxs(m,{children:["Mileage:"," ",t.jsx(v,{children:e.mileage.toLocaleString("en-US")})]}),t.jsxs(m,{children:["Price: ",t.jsx(v,{children:e.rentalPrice})]})]}),t.jsx(ce,{href:"tel:+380730000000",children:"Rental Car"})]})};R.propTypes={car:l.object.isRequired};const L=({content:e,onClose:s,isOpen:o})=>{h.useEffect(()=>{const r=p=>{p.key==="Escape"&&s()},a=()=>{document.body.style.overflow=o?"hidden":"auto"};return o&&(a(),window.addEventListener("resize",a)),window.addEventListener("keydown",r),()=>{window.removeEventListener("keydown",r),window.removeEventListener("resize",a),document.body.style.overflow="auto"}},[s,o]);const n=r=>{r.target===r.currentTarget&&s()};return t.jsx(Z,{onClick:n,children:t.jsx(ee,{children:t.jsxs(te,{children:[t.jsx(re,{type:"button",onClick:s,children:t.jsx(V,{})}),t.jsx(R,{car:e})]})})})};L.propTypes={content:l.object.isRequired,onClose:l.func.isRequired,isOpen:l.bool.isRequired};const pe=e=>e.favorites.favorites,xe=({car:e})=>{const[s,o]=h.useState(!1),r=(M(pe)||[]).some(A=>A.id===e.id),[a,p]=h.useState(!1),u=()=>{p(!0)},P=a?"https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png":e.img,k=S(),I=e.address.split(", "),q=e.type.split(", "),T=()=>{o(!0)},$=()=>{k(r?_(e.id):F(e))};return t.jsxs(B,{children:[t.jsx(H,{type:"button",onClick:$,children:t.jsx(W,{as:G,className:r?" favorite":""})}),t.jsx(N,{src:P,alt:e.model,onError:u}),t.jsxs(X,{children:[t.jsxs(C,{children:[e.make,", ",e.year]}),t.jsx(C,{children:e.rentalPrice})]}),t.jsxs(D,{children:[t.jsxs(O,{children:[t.jsx(x,{children:I[1]}),t.jsx(x,{children:I[2]}),t.jsx(x,{children:e.rentalCompany})]}),t.jsxs(O,{children:[t.jsx(x,{children:q[0]}),t.jsx(x,{children:e.model}),t.jsx(x,{children:e.id}),t.jsx(x,{children:e.accessories[0]})]})]}),t.jsx(U,{type:"button",onClick:T,children:"Learn more"}),s&&t.jsx(L,{onClose:()=>o(!1),content:e,isOpen:s})]},e.id)};xe.propTypes={car:l.shape({id:l.number.isRequired,img:l.string.isRequired,make:l.string.isRequired,model:l.string.isRequired,year:l.number.isRequired,rentalPrice:l.string.isRequired,address:l.string.isRequired,rentalCompany:l.string.isRequired,type:l.string.isRequired,accessories:l.arrayOf(l.string).isRequired}).isRequired};const ue=i.div`
   display: flex;
   flex-direction: column;
   align-items: center;
