@@ -1,13 +1,12 @@
-import{u as r,j as e,L as a}from"./index-uR6NLIQ2.js";import{m as n}from"./makes-DCESgvo9.js";const i=r.div`
+import{u as r,j as e,L as a}from"./index-Bn94uVW7.js";import{m as n}from"./makes-DCESgvo9.js";const i=r.div`
   width: 100%;
   height: 400px;
   background-color: var(--secondary-text-color);
-  background-image: 
-  // linear-gradient(
-  //     rgba(18, 20, 23, 0.2),
-  //     rgba(18, 20, 23, 0.2)
-  //   ),
-    url("../../assets/images/hero.jpg");
+  background-image: linear-gradient(
+      rgba(18, 20, 23, 0.2),
+      rgba(18, 20, 23, 0.2)
+    ),
+    url("rent-car-goit-test/src/assets/images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -34,24 +33,27 @@ import{u as r,j as e,L as a}from"./index-uR6NLIQ2.js";import{m as n}from"./makes
   &:hover {
     font-weight: 600;
   }
-`,p=r.p`
+`,l=r.p`
   font-weight: 600;
   font-size: 20px;
   line-height: 1.42857;
   color: var(--primary-accent-color);
   margin-bottom: 30px;
   text-align: center;
-`,l=r.ul`
+`,p=r.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   margin-bottom: 24px;
-`,x=r.li`
+`,g=r.li`
   border-radius: 35px;
   font-size: 16px;
   padding: 7px 14px;
   background-color: #f9f9f9;
   letter-spacing: -0.003px;
   color: var(--addit-text-color);
-`,h=()=>e.jsxs("div",{className:"container container-page",children:[e.jsxs(i,{children:[e.jsx(s,{children:"Take control of your car rent"}),e.jsx(c,{as:a,to:"/catalog",children:"Find your car to rent"})]}),e.jsx(p,{children:"We have cars for you"}),e.jsx(l,{children:n.map((t,o)=>e.jsx(x,{children:t},o))})]});export{h as default};
+`,x="/rent-car-goit-test/assets/hero-Cjs6Pcc4.jpg",m=()=>e.jsxs("div",{className:"container container-page",children:[e.jsxs(i,{style:{backgroundImage:`linear-gradient(
+      rgba(18, 20, 23, 0.2),
+      rgba(18, 20, 23, 0.2)
+    ), url(${x})`},children:[e.jsx(s,{children:"Take control of your car rent"}),e.jsx(c,{as:a,to:"/catalog",children:"Find your car to rent"})]}),e.jsx(l,{children:"We have cars for you"}),e.jsx(p,{children:n.map((t,o)=>e.jsx(g,{children:t},o))})]});export{m as default};
