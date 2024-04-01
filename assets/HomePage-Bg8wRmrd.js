@@ -1,4 +1,4 @@
-import{u as r,j as e,L as n}from"./index-DRcrceYk.js";import{m as a}from"./makes-DCESgvo9.js";const i=r.div`
+import{u as r,j as e,L as n}from"./index-BOXJodVZ.js";import{m as a}from"./makes-DCESgvo9.js";const i=r.div`
   width: 100%;
   height: 400px;
   background-color: var(--secondary-text-color);
@@ -6,7 +6,7 @@ import{u as r,j as e,L as n}from"./index-DRcrceYk.js";import{m as a}from"./makes
       rgba(18, 20, 23, 0.2),
       rgba(18, 20, 23, 0.2)
     ),
-    url("/hero.jpg");
+    url("../hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
