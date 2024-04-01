@@ -8,10 +8,18 @@ import {
   MakesListItem,
   MakesTitle,
 } from "./HomePage.styled";
+import heroBckgr from "../../assets/images/hero.jpg";
 const HomePage = () => {
   return (
     <div className="container container-page">
-      <Hero>
+      <Hero
+        style={{
+          backgroundImage: `linear-gradient(
+      rgba(18, 20, 23, 0.2),
+      rgba(18, 20, 23, 0.2)
+    ), url(${heroBckgr})`,
+        }}
+      >
         <HeroTitle>Take control of your car rent</HeroTitle>
         <HeroLink as={Link} to="/catalog">
           Find your car to rent
