@@ -4,11 +4,12 @@ export const Hero = styled.div`
   width: 100%;
   height: 400px;
   background-color: var(--secondary-text-color);
-  background-image: linear-gradient(
-      rgba(18, 20, 23, 0.2),
-      rgba(18, 20, 23, 0.2)
-    ),
-    url("../hero.jpg");
+  background-image: 
+  // linear-gradient(
+  //     rgba(18, 20, 23, 0.2),
+  //     rgba(18, 20, 23, 0.2)
+  //   ),
+    url("../../assets/images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
