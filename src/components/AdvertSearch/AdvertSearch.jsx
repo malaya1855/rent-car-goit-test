@@ -37,7 +37,8 @@ export const AdvertSearch = () => {
     dispatch(filterAdverts(newFilters));
   };
   const handleReset = () => {
-    dispatch(fetchAdverts());
+    const pageStart = 1;
+    dispatch(fetchAdverts(pageStart));
     setMake("");
     setPrice("");
     setFilters({});
