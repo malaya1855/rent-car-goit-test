@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAdverts, fetchMoreAdverts, filterAdverts } from "./operations";
+import { fetchAdverts, filterAdverts } from "./operations";
 
 const initialState = {
   items: [],
@@ -18,14 +18,15 @@ export const advertsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
+        // state.items = [...state.items, ...action.payload];
         state.isFiltered = false;
       })
-      .addCase(fetchMoreAdverts.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = null;
-        state.items = [...state.items, ...action.payload];
-        state.isFiltered = false;
-      })
+      // .addCase(fetchMoreAdverts.fulfilled, (state, action) => {
+      //   state.isLoading = false;
+      //   state.error = null;
+      //   state.items = [...state.items, ...action.payload];
+      //   state.isFiltered = false;
+      // })
       .addCase(filterAdverts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;

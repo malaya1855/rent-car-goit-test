@@ -18,8 +18,8 @@ const CatalogPage = () => {
   const loading = useSelector(isLoadingSelector);
   const filter = useSelector(filterSelector);
   const dispatch = useDispatch();
-
   useEffect(() => {
+    if (adverts.length !== 0) return;
     dispatch(fetchAdverts());
   }, [dispatch]);
 
@@ -42,7 +42,11 @@ const CatalogPage = () => {
                 <AdvertPreviewCard key={car.id} car={car} />
               ))}
           </AdvertsList>
-          {!filter && <LoadMore />}
+          {!filter && adverts.length <= 32 ? (
+            <LoadMore />
+          ) : (
+            <UniversalMessage content={"No more adverts to see"} />
+          )}
         </AdvertsPreview>
       )}
     </div>

@@ -14,17 +14,18 @@ export const fetchAdverts = createAsyncThunk(
     }
   }
 );
-export const fetchMoreAdverts = createAsyncThunk(
-  "adverts/fetchMoreAdverts",
-  async (page, thunkAPI) => {
-    try {
-      const response = await axios.get(`/adverts?page=${page}&limit=12`);
-      return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
-    }
-  }
-);
+// export const fetchMoreAdverts = createAsyncThunk(
+//   "adverts/fetchMoreAdverts",
+//   async (page, thunkAPI) => {
+//     try {
+//       console.log(page);
+//       const response = await axios.get(`/adverts?page=${page}&limit=12`);
+//       return response.data;
+//     } catch (e) {
+//       return thunkAPI.rejectWithValue(e.message);
+//     }
+//   }
+// );
 export const filterAdverts = createAsyncThunk(
   "adverts/filterAdverts",
   async (filter, thunkAPI) => {
