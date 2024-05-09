@@ -11,13 +11,20 @@ const initialState = {
 export const advertsSlice = createSlice({
   name: "adverts",
   initialState,
-
+  reducers: {
+    resetState: (state) => {
+      state.items = [];
+      state.isLoading = false;
+      state.error = null;
+      state.isFiltered = false;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchAdverts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = [...state.items, ...action.payload];
+        state.items.push(...action.payload);
         state.isFiltered = false;
       })
 
@@ -43,5 +50,6 @@ export const advertsSlice = createSlice({
       );
   },
 });
+export const { resetState } = advertsSlice.actions;
 
 export const advertsReducer = advertsSlice.reducer;

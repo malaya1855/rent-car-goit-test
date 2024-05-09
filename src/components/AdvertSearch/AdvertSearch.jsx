@@ -9,9 +9,10 @@ import {
   SearchItem,
   SelectLabel,
 } from "./AdvertSearch.styled";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchAdverts, filterAdverts } from "../../redux/adverts/operations";
+import { resetState } from "../../redux/adverts/advertsSlice.js";
 
 const filterOptions = (item) => ({
   value: item,
@@ -37,18 +38,12 @@ export const AdvertSearch = () => {
     dispatch(filterAdverts(newFilters));
   };
   const handleReset = () => {
-    const pageStart = 1;
-    dispatch(fetchAdverts(pageStart));
+    dispatch(resetState());
+    dispatch(fetchAdverts(1));
     setMake("");
     setPrice("");
     setFilters({});
   };
-
-  useEffect(() => {
-    if (make === "" && price === "") {
-      dispatch(fetchAdverts());
-    }
-  }, [dispatch, make, price]);
 
   return (
     <SearchForm onSubmit={handleSearchSubmit} id="searchForm">
